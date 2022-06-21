@@ -40,7 +40,6 @@
     "@cypress/react": "5.12.4",
     "@cypress/webpack-dev-server": "1.8.4",
     "@drptbl/gremlins.js": "2.2.1",
-    "@synthetixio/js": "2.41.0",
     "@testing-library/cypress": "8.0.3",
     "@testing-library/react": "13.3.0",
     "@types/puppeteer-core": "5.4.0",
@@ -53,8 +52,7 @@
     "etherscan-api": "10.0.5",
     "node-fetch": "2.6.1",
     "prettier": "2.6.2",
-    "puppeteer-core": "14.4.0",
-    "synthetix-js": "2.66.2"
+    "puppeteer-core": "14.4.0"
   },
   "devDependencies": {},
   "engines": {
