@@ -49,8 +49,8 @@
     "cross-zip": "4.0.0",
     "cypress": "9.6.1",
     "cypress-wait-until": "1.7.2",
-    "etherscan-api": "10.0.5",
-    "node-fetch": "2.6.1",
+    "etherscan-api": "10.0.9",
+    "node-fetch": "2.6.7",
     "prettier": "2.6.2",
     "puppeteer-core": "14.4.0"
   },
