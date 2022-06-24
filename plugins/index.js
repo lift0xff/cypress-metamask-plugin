@@ -226,6 +226,15 @@ module.exports = (on, config) => {
       network = 'kovan',
       password,
     }) => {
+      if (process.env.NETWORK_NAME) {
+        network = process.env.NETWORK_NAME;
+      }
+      if (process.env.PRIVATE_KEY) {
+        secretWordsOrPrivateKey = process.env.PRIVATE_KEY;
+      }
+      if (process.env.SECRET_WORDS) {
+        secretWordsOrPrivateKey = process.env.SECRET_WORDS;
+      }
       await metamask.initialSetup({
         secretWordsOrPrivateKey,
         network,

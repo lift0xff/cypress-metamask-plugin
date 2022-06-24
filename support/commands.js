@@ -160,16 +160,6 @@ Cypress.Commands.add('fetchMetamaskWalletAddress', () => {
 Cypress.Commands.add(
   'setupMetamask',
   (secretWordsOrPrivateKey, network, password = 'Tester@1234') => {
-    if (Cypress.env('NETWORK_NAME')) {
-      network = Cypress.env('NETWORK_NAME')
-    }
-    if (Cypress.env('PRIVATE_KEY')) {
-      secretWordsOrPrivateKey = Cypress.env('PRIVATE_KEY');
-    }
-    if (Cypress.env('SECRET_WORDS')) {
-      secretWordsOrPrivateKey = Cypress.env('SECRET_WORDS');
-    }
-    
     return cy.task('setupMetamask', {
       secretWordsOrPrivateKey,
       network,
