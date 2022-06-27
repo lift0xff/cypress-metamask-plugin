@@ -138,6 +138,10 @@ module.exports = (on, config) => {
       const activated = await metamask.activateCustomNonce();
       return activated;
     },
+    showTestnetsInMetamask: async () => {
+      const activated = await metamask.showTestnets();
+      return activated;
+    },
     resetMetamaskAccount: async () => {
       const resetted = await metamask.resetAccount();
       return resetted;

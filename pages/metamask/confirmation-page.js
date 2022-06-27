@@ -1,9 +1,10 @@
-const confirmationPage = '.confirmation-page';
-const confirmationPageFooter = `${confirmationPage} .confirmation-footer`;
+const confirmationPage = '.permissions-connect';
+const confirmationPageFooter = `${confirmationPage}-choose-account__footer-container`;
 const footer = {
   footer: confirmationPageFooter,
   cancelButton: `${confirmationPageFooter} .btn-secondary`,
-  approveButton: `${confirmationPageFooter} .btn-primary`,
+  nextButton: `${confirmationPageFooter} .btn-primary`,
+  connectButton: '[data-testid="page-container-footer-next"]',
 };
 
 module.exports.confirmationPageElements = {

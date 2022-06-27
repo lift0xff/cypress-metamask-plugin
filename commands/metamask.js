@@ -421,6 +421,25 @@ module.exports = {
     await switchToCypressIfNotActive();
     return true;
   },
+  showTestnets: async () => {
+    await switchToMetamaskIfNotActive();
+
+    await puppeteer.waitAndClick(mainPageElements.accountMenu.button);
+    await puppeteer.waitAndClick(mainPageElements.accountMenu.settingsButton);
+    await puppeteer.waitAndClick(settingsPageElements.advancedButton);
+    if (
+      (await puppeteer
+        .metamaskWindow()
+        .$(advancedPageElements.showTestnetToggleOn)) === null
+    ) {
+      await puppeteer.waitAndClick(advancedPageElements.showTestnetToggleOff);
+    }
+    await puppeteer.waitAndClick(settingsPageElements.closeButton);
+    await puppeteer.waitFor(mainPageElements.walletOverview);
+
+    await switchToCypressIfNotActive();
+    return true;
+  },
   resetAccount: async () => {
     await switchToMetamaskIfNotActive();
 
@@ -581,7 +600,7 @@ module.exports = {
   allowToAddNetwork: async () => {
     const notificationPage = await puppeteer.switchToMetamaskNotification();
     await puppeteer.waitAndClick(
-      confirmationPageElements.footer.approveButton,
+      confirmationPageElements.footer.nextButton,
       notificationPage,
     );
     return true;
@@ -597,7 +616,7 @@ module.exports = {
   allowToSwitchNetwork: async () => {
     const notificationPage = await puppeteer.switchToMetamaskNotification();
     await puppeteer.waitAndClick(
-      confirmationPageElements.footer.approveButton,
+      confirmationPageElements.footer.connectButton,
       notificationPage,
     );
     await puppeteer.metamaskWindow().waitForTimeout(3000);

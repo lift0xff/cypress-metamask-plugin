@@ -1,7 +1,7 @@
 const settingsPage = '.settings-page';
 const advancedButton = `${settingsPage} button:nth-child(2)`;
 const networksButton = `${settingsPage} button:nth-child(6)`;
-const closeButton = `${settingsPage} .settings-page__close-button`;
+const closeButton = `${settingsPage}__header__title-container__close-button`;
 module.exports.settingsPageElements = {
   settingsPage,
   advancedButton,
@@ -9,6 +9,8 @@ module.exports.settingsPageElements = {
   closeButton,
 };
 
+const showTestnetToggleOn = '.settings-page__content-row:nth-child(7) .toggle-button--on input'
+const showTestnetToggleOff = '.settings-page__content-row:nth-child(7) .toggle-button--off input'
 const customNonceToggleOn =
   '[data-testid="advanced-setting-custom-nonce"] .toggle-button--on input';
 const customNonceToggleOff =
@@ -16,6 +18,8 @@ const customNonceToggleOff =
 const resetAccountButton =
   '[data-testid="advanced-setting-reset-account"] button';
 module.exports.advancedPageElements = {
+  showTestnetToggleOn,
+  showTestnetToggleOff,
   customNonceToggleOn,
   customNonceToggleOff,
   resetAccountButton,
