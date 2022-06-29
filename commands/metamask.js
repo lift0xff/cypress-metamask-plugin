@@ -600,7 +600,7 @@ module.exports = {
   allowToAddNetwork: async () => {
     const notificationPage = await puppeteer.switchToMetamaskNotification();
     await puppeteer.waitAndClick(
-      confirmationPageElements.footer.nextButton,
+      confirmationPageElements.footer.approveButton,
       notificationPage,
     );
     return true;
@@ -616,7 +616,7 @@ module.exports = {
   allowToSwitchNetwork: async () => {
     const notificationPage = await puppeteer.switchToMetamaskNotification();
     await puppeteer.waitAndClick(
-      confirmationPageElements.footer.connectButton,
+      confirmationPageElements.footer.approveButton,
       notificationPage,
     );
     await puppeteer.metamaskWindow().waitForTimeout(3000);
@@ -703,6 +703,7 @@ module.exports = {
       await puppeteer.switchToCypressWindow();
       return true;
     } else {
+      // TODO: login with forgot password (in case password changes and cant login)
       await module.exports.unlock(password);
       walletAddress = await module.exports.getWalletAddress();
       await puppeteer.switchToCypressWindow();

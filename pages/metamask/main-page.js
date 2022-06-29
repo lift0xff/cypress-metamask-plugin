@@ -44,8 +44,8 @@ const importAccountSelector = '.new-account';
 const importAccount = {
   page: importAccountSelector,
   input: `${importAccountSelector} #private-key-box`,
-  cancelButton: `${importAccountSelector} .btn-default`,
-  importButton: `${importAccountSelector} .btn-secondary`,
+  cancelButton: `${importAccountSelector} .btn-secondary`,
+  importButton: `${importAccountSelector} .btn-primary`,
 };
 
 const createAccount = {
