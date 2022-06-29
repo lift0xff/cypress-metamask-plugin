@@ -2,7 +2,7 @@
 
 Interacting with you MetaMask made "easy" from cypress.
 
-This plugin is based on the previous work by [Jakub Mucha - drptbl](https://github.com/drptbl) and [Paulo Cardoso](https://github.com/pcardosolei)but with a more stripped down and simpler approach.
+This plugin is based on the previous work by [Jakub Mucha - drptbl](https://github.com/drptbl) and [Paulo Cardoso](https://github.com/pcardosolei) but with a more stripped down and simpler approach.
 
 **Note:** This plugin is in development mode.
 
